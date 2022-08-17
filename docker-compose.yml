@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nvim:
+    image: nvim-contained:latest
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 4G
+    volumes:
+      - [VOLUME]:/root/workspace
